@@ -4,9 +4,11 @@ import pandas
 import re
 from datetime import datetime
 from geopandas import read_file
-from geopandas.geodataframe import GeoDataFrame
 
 df = read_file("dataset/SCDi.shp")
+# reproject to EPSG:4326 for Kepler
+df = df.to_crs("EPSG:4326")
+
 # get years and dataset headlines from file
 years = set()
 datasets = set()
@@ -37,9 +39,11 @@ for dataset in datasets:
         # a bit stupid to have to have hours in yearly data
         timestamp = datetime(year=int(year), month=12, day=31, hour=12, minute=0)
         yearly_data = data_to_add[[col, 'BorderCell', 'countries', 'geometry']].rename({col: dataset}, axis='columns')
-        yearly_data.insert(0, 'timestamp', timestamp)
-        yearly_data = yearly_data.set_index('timestamp', append=True)
+        yearly_data.insert(0, 'datetime', timestamp)
+        yearly_data = yearly_data.set_index('datetime', append=True)
         yearly_frames.append(yearly_data)
     gdf = pandas.concat(yearly_frames).sort_index()
+    gdf.to_file(f"frontend/public/data/{dataset}.json", driver="GeoJSON")
+    gdf.to_csv(f"frontend/public/data/{dataset}.csv")
     dataframes[dataset] = gdf
 print(dataframes)
