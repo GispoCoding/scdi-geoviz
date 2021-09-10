@@ -25,7 +25,12 @@ python ./import_shp.py
 
 ### Data visualization
 
+```
+cd frontend
+yarn start
+```
 
+or read the full instructions for developing the React app in (/frontend/README.md).
 ## Data license 
 
 Included are international boundary data from [World Bank](https://datacatalog.worldbank.org/dataset/world-bank-official-boundaries) [CC-BY 4.0](https://datacatalog.worldbank.org/public-licenses#cc-by).
