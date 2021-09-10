@@ -4,8 +4,10 @@
 
 ## Requirements
 
-- Python >= 3.8
+- Python >= 3.8 (for importing the data)
+- Node >= 16 (for running the visualization app)
 ## How to get started
+### Data import
 
 We recommend creating your own conda env, pyenv, or pyenv which contains conda wheels. The last option should make installing all dependencies easier:
 
@@ -20,6 +22,8 @@ You must have your SCDi shapefile in `dataset` directory. The import script will
 ```
 python ./import_shp.py
 ```
+
+### Data visualization
 
 
 ## Data license 
