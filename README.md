@@ -2,7 +2,7 @@
 
 [Kepler.gl](https://kepler.gl) visualization of the [OECD Sahel and West Africa Club Secretariat](https://www.oecd.org/swac/) [Spatial Conflict Dynamics indicator](https://oecd-development-matters.org/2019/10/17/mapping-the-geography-of-political-violence-in-north-and-west-africa/).
 
-This is a simple adaptation of [ngz-geoviz](https://github.com/GispoCoding/ngz-geoviz) without the Django backend. This simplified frontend-only Kepler setup is suitable for non-realtime datasets that do not require a backend server, especially historical time series datasets that do not change.
+This is a simple adaptation of [ngz-geoviz](https://github.com/GispoCoding/ngz-geoviz) without the Django backend. This simplified static Kepler setup is suitable for non-realtime datasets that do not require a backend server, especially historical time series datasets that do not change.
 
 ## Requirements
 
