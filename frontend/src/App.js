@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
-import KeplerGl from 'kepler.gl';
 import {toggleModal} from 'kepler.gl/actions/';
 import './App.css';
 import {MAPS_MODAL_OPTIONS} from './constants/settings';
+import {replaceMapControl} from './factories/map-control';
+
+const KeplerGl = require('kepler.gl/components').injectComponents([
+  replaceMapControl()]);
 
 class App extends Component {
   state = {

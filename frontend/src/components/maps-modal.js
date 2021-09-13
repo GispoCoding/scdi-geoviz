@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {FormattedMessage, IntlProvider} from 'react-intl';
 import {withState, Button, Icons} from 'kepler.gl/components';
 import {setLocale} from 'kepler.gl/actions';
-import {loadMap, loadMapConfigurations} from '../actions';
+import {loadMap, loadMapConfigurations} from '../app/actions';
 import {LoadingDialog, ModalTitle} from 'kepler.gl';
 import {messages} from '../constants/locales';
 import {useMediaQuery} from 'react-responsive';
@@ -90,12 +90,13 @@ const MapControlButton = styled(Button).attrs({
 const Map = ({map, onClick, locale}) => {
   const isTabletOrMobile = useMediaQuery({query: '(max-width: 1224px)'});
   const isPortrait = useMediaQuery({query: '(orientation: portrait)'});
+  const imageUrl = process.env.PUBLIC_URL + '/images/' + map.id + '.png'
   return (
     <StyledMap className="sample-map-gallery__item" isMobile={isTabletOrMobile && isPortrait}>
       <IntlProvider locale={locale} messages={map.details[locale]}>
         <div className="sample-map">
           <div className="sample-map__image" onClick={onClick}>
-            {map.imageUrl && <img src={map.imageUrl} />}
+            {imageUrl && <img src={imageUrl} />}
           </div>
           <div className="sample-map__title">
             <FormattedMessage id={'label'} />
