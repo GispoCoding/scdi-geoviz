@@ -36,7 +36,7 @@ yarn start
 
 or read the full instructions for developing the React app in [/frontend/README.md](/frontend/README.md).
 
-### Adding new datasets and maps
+## Adding new datasets and maps
 
 Let's assume you want to add a dataset by the name `myData` and possibly a new map config `myConfig`.
 
