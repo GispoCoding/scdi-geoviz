@@ -55,7 +55,7 @@ function loadRemoteResourceSuccess(data, files = null) {
     });
 
     let config = data.config
-    let options = {}
+    let options = {centerMap: true}
     // config.config.mapStyle.styleType =
     //   STYLES_MAP[config.config.mapStyle.styleType] !== undefined
     //     ? STYLES_MAP[config.config.mapStyle.styleType]

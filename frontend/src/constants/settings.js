@@ -11,47 +11,47 @@ export const MAPS_MODAL_OPTIONS = {
 export const DATASETS = {
   boundaries: {
     id: "boundaries",
-    label: "World bank country boundaries",
+    label: "Country boundaries",
     type: "json",
   },
   countries: {
     id: "countries",
-    label: "World bank countries",
+    label: "Countries",
     type: "json",
   },
   evC: {
     id: "evC",
-    label: "Number of conflict events per year",
+    label: "Conflicts per year",
     type: "csv"
   },
   ftl: {
     id: "ftl",
-    label: "Number of conflict fatalities per year",
+    label: "Fatalities per year",
     type: "csv"
   },
   Dns: {
     id: "Dns",
-    label: "Number of conflict events per year per square kilometer",
+    label: "Conflicts per year per sq km",
     type: "csv"
   },
   NN_I: {
     id: "NN_I",
-    label: "The Average Nearest Neighbor (ANN) Index of the conflict events of the year",
+    label: "Nearest-neighbor index",
     type: "csv"
   },
   dn_: {
     id: "dn_",
-    label: "The classification of the cell's density score: H if over 0.0017 events / square kilometers, and L if under.",
+    label: "Density classification",
     type: "csv"
   },
   NN_: {
     id: "NN_",
-    label: "The classification of the cell's ANN Index: C if less than 1, D if less than or equal to 1.",
+    label: "Nearest-neighbor classification",
     type: "csv"
   },
   SCDI: {
     id: "SCDI",
-    label: " The SCDi score, which is a concatenation of density and ANN classification.",
+    label: "SCDi score",
     type: "csv"
   }
 }

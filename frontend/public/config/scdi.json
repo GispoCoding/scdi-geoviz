@@ -1,0 +1,473 @@
+{
+    "version": "v1",
+    "config": {
+      "visState": {
+        "filters": [
+          {
+            "dataId": [
+              "SCDI"
+            ],
+            "id": "pyw9cnts",
+            "name": [
+              "datetime"
+            ],
+            "type": "timeRange",
+            "value": [
+              1550066112000,
+              1581539107000
+            ],
+            "enlarged": true,
+            "plotType": "histogram",
+            "animationWindow": "free",
+            "yAxis": null,
+            "speed": 1
+          }
+        ],
+        "layers": [
+          {
+            "id": "qjs8ddl",
+            "type": "geojson",
+            "config": {
+              "dataId": "SCDI",
+              "label": "SCDi score",
+              "color": [
+                30,
+                150,
+                190
+              ],
+              "highlightColor": [
+                252,
+                242,
+                26,
+                255
+              ],
+              "columns": {
+                "geojson": "geometry"
+              },
+              "isVisible": true,
+              "visConfig": {
+                "opacity": 0.8,
+                "strokeOpacity": 0.8,
+                "thickness": 0.5,
+                "strokeColor": [
+                  137,
+                  218,
+                  193
+                ],
+                "colorRange": {
+                  "name": "Custom Palette",
+                  "type": "custom",
+                  "category": "Custom",
+                  "colors": [
+                    "#ca0020",
+                    "#f4a582",
+                    "#0f14dd",
+                    "#6ab2dd"
+                  ]
+                },
+                "strokeColorRange": {
+                  "name": "Global Warming",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#900C3F",
+                    "#C70039",
+                    "#E3611C",
+                    "#F1920E",
+                    "#FFC300"
+                  ]
+                },
+                "radius": 10,
+                "sizeRange": [
+                  0,
+                  10
+                ],
+                "radiusRange": [
+                  0,
+                  50
+                ],
+                "heightRange": [
+                  0,
+                  500
+                ],
+                "elevationScale": 5,
+                "enableElevationZoomFactor": false,
+                "stroked": false,
+                "filled": true,
+                "enable3d": false,
+                "wireframe": false
+              },
+              "hidden": false,
+              "textLabel": [
+                {
+                  "field": null,
+                  "color": [
+                    255,
+                    255,
+                    255
+                  ],
+                  "size": 18,
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "anchor": "start",
+                  "alignment": "center"
+                }
+              ]
+            },
+            "visualChannels": {
+              "colorField": {
+                "name": "SCDI",
+                "type": "string"
+              },
+              "colorScale": "ordinal",
+              "strokeColorField": null,
+              "strokeColorScale": "quantile",
+              "sizeField": null,
+              "sizeScale": "linear",
+              "heightField": {
+                "name": "SCDI",
+                "type": "string"
+              },
+              "heightScale": "point",
+              "radiusField": null,
+              "radiusScale": "linear"
+            }
+          },
+          {
+            "id": "jl2mv97",
+            "type": "geojson",
+            "config": {
+              "dataId": "countries",
+              "label": "Countries",
+              "color": [
+                25,
+                20,
+                16
+              ],
+              "highlightColor": [
+                252,
+                242,
+                26,
+                255
+              ],
+              "columns": {
+                "geojson": "_geojson"
+              },
+              "isVisible": true,
+              "visConfig": {
+                "opacity": 0,
+                "strokeOpacity": 0.8,
+                "thickness": 0.5,
+                "strokeColor": [
+                  255,
+                  250,
+                  102
+                ],
+                "colorRange": {
+                  "name": "Global Warming",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#900C3F",
+                    "#C70039",
+                    "#E3611C",
+                    "#F1920E",
+                    "#FFC300"
+                  ]
+                },
+                "strokeColorRange": {
+                  "name": "Global Warming",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#900C3F",
+                    "#C70039",
+                    "#E3611C",
+                    "#F1920E",
+                    "#FFC300"
+                  ]
+                },
+                "radius": 10,
+                "sizeRange": [
+                  0,
+                  10
+                ],
+                "radiusRange": [
+                  0,
+                  50
+                ],
+                "heightRange": [
+                  0,
+                  500
+                ],
+                "elevationScale": 5,
+                "enableElevationZoomFactor": true,
+                "stroked": true,
+                "filled": true,
+                "enable3d": false,
+                "wireframe": false
+              },
+              "hidden": false,
+              "textLabel": [
+                {
+                  "field": null,
+                  "color": [
+                    255,
+                    255,
+                    255
+                  ],
+                  "size": 18,
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "anchor": "start",
+                  "alignment": "center"
+                }
+              ]
+            },
+            "visualChannels": {
+              "colorField": null,
+              "colorScale": "quantile",
+              "strokeColorField": null,
+              "strokeColorScale": "quantile",
+              "sizeField": null,
+              "sizeScale": "linear",
+              "heightField": null,
+              "heightScale": "linear",
+              "radiusField": null,
+              "radiusScale": "linear"
+            }
+          },
+          {
+            "id": "kfzo3cl",
+            "type": "geojson",
+            "config": {
+              "dataId": "boundaries",
+              "label": "Country boundaries",
+              "color": [
+                255,
+                203,
+                153
+              ],
+              "highlightColor": [
+                252,
+                242,
+                26,
+                255
+              ],
+              "columns": {
+                "geojson": "_geojson"
+              },
+              "isVisible": false,
+              "visConfig": {
+                "opacity": 0.8,
+                "strokeOpacity": 0.8,
+                "thickness": 0.5,
+                "strokeColor": null,
+                "colorRange": {
+                  "name": "Global Warming",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#900C3F",
+                    "#C70039",
+                    "#E3611C",
+                    "#F1920E",
+                    "#FFC300"
+                  ]
+                },
+                "strokeColorRange": {
+                  "name": "Global Warming",
+                  "type": "sequential",
+                  "category": "Uber",
+                  "colors": [
+                    "#5A1846",
+                    "#900C3F",
+                    "#C70039",
+                    "#E3611C",
+                    "#F1920E",
+                    "#FFC300"
+                  ]
+                },
+                "radius": 10,
+                "sizeRange": [
+                  0,
+                  10
+                ],
+                "radiusRange": [
+                  0,
+                  50
+                ],
+                "heightRange": [
+                  0,
+                  500
+                ],
+                "elevationScale": 5,
+                "enableElevationZoomFactor": true,
+                "stroked": true,
+                "filled": false,
+                "enable3d": false,
+                "wireframe": false
+              },
+              "hidden": false,
+              "textLabel": [
+                {
+                  "field": null,
+                  "color": [
+                    255,
+                    255,
+                    255
+                  ],
+                  "size": 18,
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "anchor": "start",
+                  "alignment": "center"
+                }
+              ]
+            },
+            "visualChannels": {
+              "colorField": null,
+              "colorScale": "quantile",
+              "strokeColorField": null,
+              "strokeColorScale": "quantile",
+              "sizeField": null,
+              "sizeScale": "linear",
+              "heightField": null,
+              "heightScale": "linear",
+              "radiusField": null,
+              "radiusScale": "linear"
+            }
+          }
+        ],
+        "interactionConfig": {
+          "tooltip": {
+            "fieldsToShow": {
+              "boundaries": [
+                {
+                  "name": "featurecla",
+                  "format": null
+                },
+                {
+                  "name": "name",
+                  "format": null
+                },
+                {
+                  "name": "comment",
+                  "format": null
+                },
+                {
+                  "name": "adm0_usa",
+                  "format": null
+                },
+                {
+                  "name": "adm0_left",
+                  "format": null
+                }
+              ],
+              "countries": [
+                {
+                  "name": "OBJECTID",
+                  "format": null
+                },
+                {
+                  "name": "featurecla",
+                  "format": null
+                },
+                {
+                  "name": "LEVEL",
+                  "format": null
+                },
+                {
+                  "name": "TYPE",
+                  "format": null
+                },
+                {
+                  "name": "FORMAL_EN",
+                  "format": null
+                }
+              ],
+              "SCDI": [
+                {
+                  "name": "column_0",
+                  "format": null
+                },
+                {
+                  "name": "datetime",
+                  "format": null
+                },
+                {
+                  "name": "SCDI",
+                  "format": null
+                },
+                {
+                  "name": "BorderCell",
+                  "format": null
+                },
+                {
+                  "name": "countries",
+                  "format": null
+                }
+              ]
+            },
+            "compareMode": false,
+            "compareType": "absolute",
+            "enabled": true
+          },
+          "brush": {
+            "size": 0.5,
+            "enabled": false
+          },
+          "geocoder": {
+            "enabled": false
+          },
+          "coordinate": {
+            "enabled": false
+          }
+        },
+        "layerBlending": "normal",
+        "splitMaps": [],
+        "animationConfig": {
+          "currentTime": null,
+          "speed": 1
+        }
+      },
+      "mapState": {
+        "bearing": 0,
+        "dragRotate": false,
+        "latitude": 11.252849286917106,
+        "longitude": -1.5039203652256765,
+        "pitch": 0,
+        "zoom": 3.698933488755457,
+        "isSplit": false
+      },
+      "mapStyle": {
+        "styleType": "dark",
+        "topLayerGroups": {},
+        "visibleLayerGroups": {
+          "label": true,
+          "road": true,
+          "border": false,
+          "building": true,
+          "water": true,
+          "land": true,
+          "3d building": false
+        },
+        "threeDBuildingColor": [
+          9.665468314072013,
+          17.18305478057247,
+          31.1442867897876
+        ],
+        "mapStyles": {}
+      }
+    }
+  }
