@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import { createAction, handleActions } from "redux-actions";
-import keplerGlReducer from 'kepler.gl/reducers';
+import keplerGlReducer, { combinedUpdaters } from 'kepler.gl/reducers';
+
 
 import {
   LOAD_MAPS_FILE,
+  LOAD_REMOTE_RESOURCE_SUCCESS,
   SET_LOADING_STATUS,
   SET_MAP_ID,
   SET_MAPBOX_REF,
@@ -121,5 +123,37 @@ const scdiReducer = combineReducers({
         //   }),
     app: appReducer
   });
-  
-export default scdiReducer;
+
+// we need this to update the whole state when remote data is loaded
+const loadRemoteResourceUpdater = (state, action) => {
+  const keplerGlInstance = combinedUpdaters.addDataToMapUpdater(
+    state.keplerGl.map, // "map" is the id of your kepler.gl instance
+    action
+  )
+  return {
+    ...state,
+    app: {
+      ...state.app,
+      isMapLoading: false, // Turn off the spinner
+      // what are the details here anyway?
+      // currentDetails: action.data.details
+    },
+    keplerGl: {
+      ...state.keplerGl,
+      map: keplerGlInstance
+    }
+  }
+};
+
+const composedUpdaters = {
+  [LOAD_REMOTE_RESOURCE_SUCCESS]: loadRemoteResourceUpdater
+};
+
+const composedReducer = (state, action) => {
+  // use special reducer at remote data load
+  if (composedUpdaters[action.type]) {
+    return composedUpdaters[action.type](state, action);
+  }
+  return scdiReducer(state, action);
+};
+export default composedReducer;
