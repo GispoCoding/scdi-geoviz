@@ -9,16 +9,13 @@ import { Icons,
   MapLegendPanelFactory } from 'kepler.gl/components';
 import { Tooltip } from "kepler.gl";
 import { MAPS_MODAL_OPTIONS } from "../constants/settings";
+import InfoPanel from './info-panel';
+import StyledFloatingPanel from './styled-floating-panel';
 
 // can't use the factory like this, we must use individual control components instead
 // const MapControl = MapControlFactory();
 const MapControl = MapControlFactory(
   MapDrawPanelFactory(), Toggle3dButtonFactory(), SplitMapButtonFactory(), MapLegendPanelFactory());
-
-const StyledFloatingPanel = styled.div`
-  margin-right: 12px;
-  margin-top: 20px;
-`;
 
 const StyledMapControlOverlay = styled.div`
   position: absolute;
@@ -58,10 +55,7 @@ const CustomMapControl = props => (
     <ActionPanel key={1}>
       <ToggleMapsModalButton {...props} />
     </ActionPanel>
-    {/* Not sure if we will need the statistics panel this time?
-      {props.currentDetails ? <InfoPanel {...props} /> : null} */}
-    {/* The MapControl won't work. The factory now requires all
-      the components separately. */}
+      {props.currentDetails ? <InfoPanel {...props} /> : null}
     <MapControl {...props} />
   </StyledMapControlOverlay>
 );

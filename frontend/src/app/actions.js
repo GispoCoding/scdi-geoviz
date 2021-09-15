@@ -64,8 +64,11 @@ function loadRemoteResourceSuccess(data, files = null) {
     payload = {
       datasets,
       options,
-      config
+      config,
+      details: data.details
     }
+    console.log('we have payload')
+    console.log(payload)
   }
   return {
     type: LOAD_REMOTE_RESOURCE_SUCCESS,
@@ -122,6 +125,8 @@ export function loadMap(map) {
           details: map.details,
           datasets: map.datasets
         }
+        console.log('we have data')
+        console.log(data)
         dispatch(loadRemoteData(data))
       }
     })
@@ -152,6 +157,8 @@ export function loadRemoteData(data) {
           });
         })
       ).then(datasets => {
+        console.log('we dispatch success with data')
+        console.log(data)
         dispatch(setLoadingMapStatus(false));
         dispatch(loadRemoteResourceSuccess(data, files));
       });

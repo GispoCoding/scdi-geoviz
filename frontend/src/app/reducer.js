@@ -30,8 +30,8 @@ const initialState = {
     error: null, // contains error when loading/retrieving data/configuration
     currentDetails: null,
     currentStatistics: [],
-    minZoom: 0,
-    maxZoom: 24
+    minZoom: 3,
+    maxZoom: 8
   };
 
 // REDUCER
@@ -135,8 +135,7 @@ const loadRemoteResourceUpdater = (state, action) => {
     app: {
       ...state.app,
       isMapLoading: false, // Turn off the spinner
-      // what are the details here anyway?
-      // currentDetails: action.data.details
+      currentDetails: action.payload.details
     },
     keplerGl: {
       ...state.keplerGl,

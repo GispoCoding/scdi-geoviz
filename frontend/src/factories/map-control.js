@@ -29,7 +29,7 @@ export const CustomMapControlFactory = () => withState(
   //lenses
   [],
   //mapStateToProps
-  state => ({...state.keplerGl.map.uiState, ...state.keplerGl.map}),
+  state => ({...state.app, ...state.keplerGl.map.uiState, ...state.keplerGl.map}),
   //action creators
   {openModal: toggleModal, onLoadMap: loadMap, loadMapConfigurations}
 )(CustomMapControl);
