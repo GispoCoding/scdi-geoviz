@@ -398,10 +398,6 @@
               ],
               "SCDI": [
                 {
-                  "name": "column_0",
-                  "format": null
-                },
-                {
                   "name": "datetime",
                   "format": null
                 },
@@ -442,12 +438,12 @@
         }
       },
       "mapState": {
-        "bearing": 0,
-        "dragRotate": false,
-        "latitude": 11.252849286917106,
-        "longitude": -1.5039203652256765,
-        "pitch": 0,
-        "zoom": 3.698933488755457,
+        "bearing": 24,
+        "dragRotate": true,
+        "latitude": 11.762524320797539,
+        "longitude": -8.090773157359326,
+        "pitch": 50,
+        "zoom": 4.016849109240669,
         "isSplit": false
       },
       "mapStyle": {
