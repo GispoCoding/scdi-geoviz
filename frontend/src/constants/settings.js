@@ -53,6 +53,11 @@ export const DATASETS = {
     id: "SCDI",
     label: "SCDi score",
     type: "csv"
+  },
+  NN__dn__SCDI: {
+    id : "NN__dn__SCDI",
+    label: "SCDi score with NN and dn components",
+    type: "csv"
   }
 }
 
@@ -60,7 +65,7 @@ export const MAP_CONFIGS = [
   {
     id: "scdi",
     readOnly: false,
-    minZoom: 2,
+    minZoom: 3,
     maxZoom: 8,
     enabled: true,
     stripUi: false,
@@ -76,13 +81,13 @@ export const MAP_CONFIGS = [
     datasets: [
       DATASETS.boundaries,
       DATASETS.countries,
-      DATASETS.SCDI
+      DATASETS.NN__dn__SCDI
     ]
   },
   {
     id: "events",
     readOnly: false,
-    minZoom: 2,
+    minZoom: 3,
     maxZoom: 8,
     enabled: true,
     stripUi: false,
@@ -103,7 +108,7 @@ export const MAP_CONFIGS = [
   {
     id: "fatalities",
     readOnly: false,
-    minZoom: 2,
+    minZoom: 3,
     maxZoom: 8,
     enabled: true,
     stripUi: false,

@@ -7,7 +7,7 @@ from geopandas import read_file
 
 merge_datasets = [
     ['Dns', 'ftl'],
-    ['dn_', 'NN_', 'SCDI']
+    ['NN_', 'dn_', 'SCDI']
 ]
 
 df = read_file("dataset/SCDi.shp")
