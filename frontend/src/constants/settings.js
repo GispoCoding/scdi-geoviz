@@ -78,5 +78,47 @@ export const MAP_CONFIGS = [
       DATASETS.countries,
       DATASETS.SCDI
     ]
+  },
+  {
+    id: "events",
+    readOnly: false,
+    minZoom: 2,
+    maxZoom: 8,
+    enabled: true,
+    stripUi: false,
+    details: {
+      en: {
+        label: "Conflict events in North and West Africa",
+        detail: "Aggregated number of conflict events per cell per year.",
+        desc: "Aggregated conflict events per cell form the basis of the SCDi",
+      }
+    },
+    statistics: [],
+    datasets: [
+      DATASETS.boundaries,
+      DATASETS.countries,
+      DATASETS.evC
+    ]
+  },
+  {
+    id: "fatalities",
+    readOnly: false,
+    minZoom: 2,
+    maxZoom: 8,
+    enabled: true,
+    stripUi: false,
+    details: {
+      en: {
+        label: "Fatalities in conflicts in North and West Africa",
+        detail: "Aggregated number of conflict fatalities per cell per year.",
+        desc: "Fatalities tell us more about the scale of the local conflicts",
+      }
+    },
+    statistics: [],
+    datasets: [
+      DATASETS.boundaries,
+      DATASETS.countries,
+      DATASETS.ftl
+    ]
   }
 ]
