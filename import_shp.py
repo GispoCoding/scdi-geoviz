@@ -6,8 +6,8 @@ from datetime import datetime
 from geopandas import read_file
 
 merge_datasets = [
-    {'Dns', 'ftl'},
-    {'dn_', 'NN_', 'SCDI'}
+    ['Dns', 'ftl'],
+    ['dn_', 'NN_', 'SCDI']
 ]
 
 df = read_file("dataset/SCDi.shp")
@@ -36,7 +36,7 @@ for dataset in datasets:
         columns = {dataset} if isinstance(dataset, str) else dataset
 
         # pick selected columns from the whole set
-        cols = {column + year for column in columns}
+        cols = [column + year for column in columns]
         # filter points that have at least one non-zero value in any of the datasets
         not_null_query = ""
         for col in cols:
