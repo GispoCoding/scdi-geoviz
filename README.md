@@ -39,6 +39,7 @@ python ./import_shp.py
 ```
 npm install yarn
 cd frontend
+yarn
 yarn start
 ```
 
