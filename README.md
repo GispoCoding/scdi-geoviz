@@ -20,7 +20,7 @@ conda activate scdi-geoviz
 conda install -c conda-forge --file requirements.txt
 ```
 
-Alternatively, if you are using pyenv, use a pyenv which contains conda wheels to make installing all dependencies easier:
+Alternatively, if you are using pyenv, use a miniconda pyenv which contains conda wheels to make installing all dependencies easier:
 
 ```
 pyenv install miniconda-latest
