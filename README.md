@@ -36,6 +36,9 @@ python ./import_shp.py
 
 ### Data visualization
 
+You need to have [a Mapbox account](https://account.mapbox.com/auth/signup/) to use Mapbox background maps. Once you have created a Mapbox account, copy your public API token from the [Mapbox tokens page](https://account.mapbox.com/access-tokens) and paste it in the [/frontend/.env](/frontend/.env) file.
+
+Then, just
 ```
 npm install yarn
 cd frontend
@@ -43,7 +46,7 @@ yarn
 yarn start
 ```
 
-or read the full instructions for developing the React app in [/frontend/README.md](/frontend/README.md).
+Read the full instructions for developing the React app in [/frontend/README.md](/frontend/README.md).
 
 ## Adding new datasets and maps
 
