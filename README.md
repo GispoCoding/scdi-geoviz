@@ -12,7 +12,15 @@ This is a simple adaptation of [ngz-geoviz](https://github.com/GispoCoding/ngz-g
 ## How to get started
 ### Data import
 
-We recommend creating your own conda env, pyenv, or pyenv which contains conda wheels. The last option should make installing all dependencies easier:
+We recommend creating your own conda env:
+
+```
+conda create -n scdi-geoviz
+conda activate scdi-geoviz
+conda install -c conda-forge --file requirements.txt
+```
+
+Alternatively, if you are using pyenv, use a miniconda pyenv which contains conda wheels to make installing all dependencies easier:
 
 ```
 pyenv install miniconda-latest
@@ -31,6 +39,7 @@ python ./import_shp.py
 ```
 npm install yarn
 cd frontend
+yarn
 yarn start
 ```
 
